@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  padding: 0 2rem;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "ma"
+    "fo";
+}
+
+header {
+  grid-area: hd;
+}
+
+main {
+  grid-area: ma;
+}
+
+footer {
+  grid-area: fo;
+}
+
+.logo {
+  padding: 1.5rem;
+  font-size: 5em;
+  /* text-align: center; */
+  font-weight: normal;
+}
+
+nav ul li {
+  padding-bottom: 1.2rem;
+}
+
+nav ul li a {
+  color: #02b3e4;
+  font-size: 1.2em;
+}
+
+nav .button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+nav .follow {
+  background-color: #02b3e4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav .subs {
+  border: 1px solid #02b3e4;
+  color: #02b3e4;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+main h1 {
+  color: #666666;
+  font-size: 1.5em;
+  padding-bottom: 1.5rem;
+}
+
+section .card {
+  background-color: #efefef;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 300px;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+section .card h2 {
+  color: #666666;
+  margin-bottom: 1.6rem;
+}
+
+section .card p {
+  color: #666666;
+}
+
+section .card .title1 a {
+  color: #02b3e4;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #666666;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+@media (min-width: 900px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "hd ma"
+      "fo fo";
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  section .card {
+    flex-grow: 1;
+    height: 450px;
+  }
+
+  section .card h2 {
+    display: inline;
+  }
+
+  section .card p {
+    max-width: 50rem;
+    margin-top: 20px;
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1100px) {
+  section {
+    gap: 5rem;
+  }
+
+  section .card p {
+    font-size: 1.4em;
+  }
+}
