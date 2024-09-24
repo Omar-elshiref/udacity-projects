@@ -168,12 +168,12 @@ p {
   line-height: 1.5em;
 }
 
-.qu {
+.quote {
   border-left: 4px solid black;
   height: fit-content;
 }
 
-.qu p {
+.quote blockquote {
   padding: 16px;
 }
 
