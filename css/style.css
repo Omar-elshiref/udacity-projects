@@ -1,3 +1,7 @@
+@import "main-style.css";
+@import "card-style.css";
+@import "footer-style.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -139,9 +143,6 @@ main h1 {
   padding-bottom: 1.5rem;
 }
 
-
-
-
 @media (min-width: 900px) {
   .container {
     height: 100vh;
@@ -151,43 +152,5 @@ main h1 {
     grid-template-areas:
       "hd ma"
       "fo fo";
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  section {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-  section .card {
-    flex-grow: 1;
-    max-height: 60rem;
-  }
-
-  section .card h2 {
-    display: inline;
-  }
-
-  section .card p {
-    max-width: 50rem;
-    margin-top: 20px;
-    font-size: 1.1em;
-  }
-}
-
-@media (min-width: 1100px) {
-  section {
-    gap: 5rem;
-  }
-
-  section .card p {
-    font-size: 1.4em;
   }
 }
